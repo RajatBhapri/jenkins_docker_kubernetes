@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t RajatBhapri/devops-integration .'
+                    sh 'docker build -t rajatbhapri/my_jenkins_app .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u RajatBhapri -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push RajatBhapri/devops-integration'
+                   sh 'docker push rajatbhapri/my_jenkins_app'
                 }
             }
         }
